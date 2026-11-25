@@ -1,0 +1,12 @@
+{
+  "id": "hello",
+  "version": "0.1.0",
+  "framework": ">=2.1.0 <3.0.0",
+  "license": "MIT",
+  "skills": ["greet"],
+  "requires_extensions": {},
+  "mcp": [],
+  "company_paths": [],
+  "service": null,
+  "exceptions": []
+}

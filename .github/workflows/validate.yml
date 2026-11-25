@@ -1,0 +1,17 @@
+name: validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install juvant-os in a scratch company
+        run: |
+          git clone -q --branch v2.1.0-rc.1 https://github.com/juvantlabs/juvant-os.git "$RUNNER_TEMP/jos"
+          bash "$RUNNER_TEMP/jos/setup.sh" "$RUNNER_TEMP/co" --company Morvento
+      - run: python3 tools/validate.py "$RUNNER_TEMP/co"
