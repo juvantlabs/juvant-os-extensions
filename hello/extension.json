@@ -1,6 +1,6 @@
 {
   "id": "hello",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "framework": ">=2.1.0 <3.0.0",
   "license": "MIT",
   "skills": ["greet"],
