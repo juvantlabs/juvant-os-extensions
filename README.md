@@ -6,7 +6,7 @@ Extensions for [juvant-os](https://github.com/juvantlabs/juvant-os): optional ca
 |---|---|---|
 | [`hello`](hello/) | A greeting. Shows what an extension looks like and tests the whole path | Demo |
 
-Needs juvant-os v2.1 or later.
+Needs juvant-os v2.1.0 or later.
 
 ## Use one
 
