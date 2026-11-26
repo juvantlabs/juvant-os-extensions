@@ -249,7 +249,7 @@ Rules that make the company's limits stricter. They can only **deny** or **ask**
 CI runs the installer's own checks on every push and pull request. To run them yourself, install juvant-os in a scratch folder and point the validator at it:
 
 ```bash
-git clone -q --branch v2.1.1 https://github.com/juvantlabs/juvant-os.git /tmp/jos
+git clone -q --branch v2.1.2 https://github.com/juvantlabs/juvant-os.git /tmp/jos
 bash /tmp/jos/setup.sh /tmp/scratch-co --company Example
 python3 tools/validate.py /tmp/scratch-co            # every extension
 python3 tools/validate.py /tmp/scratch-co my-extension
