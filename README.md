@@ -31,7 +31,25 @@ There were already two ways to give the Chief of Staff a new capability. Neither
 - an update of juvant-os may collide with it;
 - its needs stay unstated. A connector, a service running elsewhere, a rule it relies on: nobody approves them, because nobody sees them.
 
-**An extension** reaches only the companies that choose it, and is looked after like part of the framework:
+**An extension** reaches only the companies that choose it, and is looked after like part of the framework.
+
+### What an extension adds to a skill
+
+At its core an extension *is* one or more skills. Around them it carries what a skill alone can't say:
+
+| Beside the skills | What it gives |
+|---|---|
+| 📋 **A manifest** (`extension.json`) | A name, a version, and the juvant-os versions it works with: it installs only where it fits, and updates know what changed |
+| 🔌 **Its needs, declared** | The connectors it uses and how (read, draft or write), the company folders it writes, the other extensions it relies on. The CEO sees and approves each one before it installs |
+| 🛰️ **A companion service, described** | When the capability needs something outside the session (a bot in a meeting, a server), what it is, what data it gets, what it can send and how to stop it |
+| 🛡️ **Its own limits** | Rules that deny or ask, added to the company's while it's installed and removed with it. A skill that only reads can, for instance, deny every tool that deletes |
+| ⚙️ **Company settings** | Defaults the company adjusts once, in its own file that updates don't touch |
+| 📖 **A README for the CEO** | What it does in plain words, before anyone confirms |
+| 📌 **A known origin** | A published release, pinned to its commit, checked at every session start |
+
+So a skill tells the Chief of Staff *how* to do something; an extension also says *what it takes*, and lets the CEO decide whether to allow it.
+
+### Side by side
 
 | | Skill in juvant-os | Skill copied by hand | Extension |
 |---|:-:|:-:|:-:|
