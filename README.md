@@ -6,12 +6,44 @@
 
 **Optional capabilities for a company's Chief of Staff.** An extension adds skills to a [juvant-os](https://github.com/juvantlabs/juvant-os) company, and can add stricter limits. It never loosens one. juvant-os installs, checks, updates and removes extensions. This repository is where the official ones are developed and released.
 
+- [Why extensions, and not just more skills](#why-extensions-and-not-just-more-skills)
 - [Catalogue](#catalogue)
 - [For the CEO: using an extension](#for-the-ceo-using-an-extension)
 - [What an extension can and can't do](#what-an-extension-can-and-cant-do)
 - [For developers: writing an extension](#for-developers-writing-an-extension)
 - [Releasing](#releasing)
 - [Contributing, security, license](#contributing)
+
+---
+
+## Why extensions, and not just more skills
+
+There were already two ways to give the Chief of Staff a new capability. Neither fits everything.
+
+**A new skill in juvant-os** reaches *every* company at its next update. That's right for what every company needs: a contract review, a month-end close. It's wrong for what only some need, such as a meeting facilitator for Teams, a tool for one sector or one country's tax filing:
+- every installed skill is one more thing the Chief of Staff weighs on every request;
+- every framework release has to be reviewed and published for everyone;
+- whoever writes the capability has to send it into juvant-os itself.
+
+**A skill copied by hand into a company** reaches only that company, but nobody looks after it:
+- nothing records where it came from or which version it is;
+- nothing updates it, and nothing notices if someone edits it;
+- an update of juvant-os may collide with it;
+- its needs stay unstated. A connector, a service running elsewhere, a rule it relies on: nobody approves them, because nobody sees them.
+
+**An extension** reaches only the companies that choose it, and is looked after like part of the framework:
+
+| | Skill in juvant-os | Skill copied by hand | Extension |
+|---|:-:|:-:|:-:|
+| Only the companies that want it | ❌ | ✅ | ✅ |
+| Its own releases, without a juvant-os release | ❌ | ✅ | ✅ |
+| Known source and version, checked at every session | ✅ | ❌ | ✅ |
+| Updated, restored and removed with a confirmation | ✅ | ❌ | ✅ |
+| Its needs shown to the CEO and approved | n/a | ❌ | ✅ |
+| Can bring stricter limits with it | n/a | ❌ | ✅ |
+| Written by anyone, outside juvant-os | ❌ | ✅ | ✅ |
+
+The rule of thumb: **what every company needs goes into juvant-os; what only some need becomes an extension.** A capability can start as an extension and move into the framework once most companies use it.
 
 ---
 
